@@ -67,12 +67,14 @@ const content = `
  * - Returns <figure>
  */
 const addFigure = (dataObj) => {
-  let newFigure = document.createElement("figure");
   let newImg = document.createElement("img");
   newImg.setAttribute("src", dataObj.image);
-  newImg.setAttribute("alt", "");
+  // newImg.setAttribute("alt", "");
+
   let newDesc = document.createElement("figcaption");
   newDesc.innerText = dataObj.description;
+
+  let newFigure = document.createElement("figure");
   newFigure.append(newImg, newDesc);
   return newFigure;
 };
